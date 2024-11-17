@@ -1,0 +1,13 @@
+{
+  "name": "nodejs-web-app_",
+  "version": "0.0.0",
+  "description": "NodejsWebApp_",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1"
+  },
+  "eslintConfig": {}
+}

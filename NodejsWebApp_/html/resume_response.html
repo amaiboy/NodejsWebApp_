@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Відповідь на резюме автора amai.">
+    <title>Відповідь на резюме</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/form-handler.js"></script>
+</head>
+<body>
+    <section class="response-form-section">
+        <h2>Форма відгуку від компанії</h2>
+        <form id="feedbackForm" class="company-response-form" action="/submit" method="post">
+            <label for="company-name">Назва компанії:</label>
+            <input type="text" id="company-name" name="companyName" value="Тестова Компанія" required>
+            <div id="companyNameError" class="error-message" style="display: none;"></div>
+
+            <label for="contact-name">Контактна особа:</label>
+            <input type="text" id="contact-name" name="contactName" value="Іван Іванов" required>
+            <div id="contactNameError" class="error-message" style="display: none;"></div>
+
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" value="test@example.com" required>
+            <div id="emailError" class="error-message" style="display: none;"></div>
+
+            <label for="phone">Номер телефону:</label>
+            <input type="tel" id="phone" name="phone" value="+380123456789">
+            <div id="phoneError" class="error-message" style="display: none;"></div>
+
+            <label>Статус відгуку:</label>
+            <select name="status" required>
+                <option value="">-- Оберіть варіант --</option>
+                <option value="interested" selected>Зацікавлені</option>
+                <option value="not-interested">Не зацікавлені</option>
+                <option value="need-more-info">Потрібна додаткова інформація</option>
+            </select>
+
+            <label for="response-date">Дата відгуку:</label>
+            <input type="date" id="response-date" name="responseDate" value="2023-10-31" required>
+
+            <fieldset>
+                <legend>Оцінка кандидата (від 1 до 5):</legend>
+                <input type="radio" id="rating-1" name="rating" value="1">
+                <label for="rating-1">1</label>
+                <input type="radio" id="rating-2" name="rating" value="2">
+                <label for="rating-2">2</label>
+                <input type="radio" id="rating-3" name="rating" value="3">
+                <label for="rating-3">3</label>
+                <input type="radio" id="rating-4" name="rating" value="4" checked>
+                <label for="rating-4">4</label>
+                <input type="radio" id="rating-5" name="rating" value="5">
+                <label for="rating-5">5</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Бажаний спосіб зв'язку:</legend>
+                <input type="checkbox" id="contact-email" name="contactMethod[]" value="email" checked>
+                <label for="contact-email">Електронна пошта</label>
+                <input type="checkbox" id="contact-phone" name="contactMethod[]" value="phone">
+                <label for="contact-phone">Телефон</label>
+                <input type="checkbox" id="contact-post" name="contactMethod[]" value="post">
+                <label for="contact-post">Поштова адреса</label>
+            </fieldset>
+
+            <label for="comments">Коментарі:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Введіть коментарі тут...">Це тестовий коментар</textarea>
+
+            <button type="submit">Надіслати відгук</button>
+        </form>
+    </section>
+</body>
+</html>
